@@ -30,7 +30,7 @@ app.setErrorHandler((error, _request, reply) => {
   if (error instanceof ZodError) {
     return reply
       .status(400)
-      .send({ message: 'Valdiation error', issues: error.format() })
+      .send({ message: 'Validation error', issues: error.format() })
   }
 
   if (env.NODE_ENV !== 'production') {
